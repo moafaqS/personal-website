@@ -9,7 +9,6 @@ import { BoxesWave } from "../Background/BoxesWave";
 function HeroSection() {
   return (
     <Wrapper>
-      {/* <WaveBackground /> */}
       <ContentWrapper>
         <BoxesWave />
         <TextWrapper>
