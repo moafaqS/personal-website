@@ -5,7 +5,7 @@ export const H1 = styled.h1`
   font-size: 60px;
 
   @media (max-width: 450px) {
-    font-size: 48px;
+    font-size: 34px;
   }
 `;
 
@@ -21,6 +21,7 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
   font-weight: bold;
   font-size: 30px;
+
   @media (max-width: 450px) {
     font-size: 24px;
   }

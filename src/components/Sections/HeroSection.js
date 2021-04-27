@@ -9,6 +9,7 @@ import { BoxesWave } from "../Background/BoxesWave";
 function HeroSection() {
   return (
     <Wrapper>
+      {/* <WaveBackground /> */}
       <ContentWrapper>
         <BoxesWave />
         <TextWrapper>
@@ -86,7 +87,6 @@ const TextWrapper = styled.div`
 
 const MockupWrapper = styled.div`
   position: relative;
-  animation: ${animation} 1s forwards;
 
   @media (max-width: 768px) {
     transform: scale(0.6);
@@ -104,6 +104,7 @@ const Mockup = styled.div`
   height: 606px;
   left: 0px;
   top: 0px;
+  animation: ${animation} 1s forwards;
 `;
 
 const WelcomeText = styled(H2)`

@@ -49,7 +49,6 @@ export const AboutMeSection = () => {
 const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
-  /* background: rgba(240, 240, 254, 1); */
 `;
 const ContentWrapper = styled.div`
   display: grid;
@@ -67,34 +66,21 @@ const Image = styled.img`
 `;
 const TextWrapper = styled.div`
   box-sizing: border-box;
-  padding: 0 250px;
-  width: 100%;
+  width: 60%;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    font-size: 15px;
+  }
 `;
 const Name = styled(BodyIntro)``;
 const Summery = styled(BodyMain)`
   text-align: justify;
-  text-justify: inter-word;
   * {
     padding-top: 15px;
   }
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 `;
-
-// const Wrapper = styled.div`
-//   position: relative;
-//   overflow: hidden;
-// `;
-// const ContentWrapper = styled.div`
-//   max-width: 1234px;
-//   margin: 0 auto;
-//   padding: 130px 30px;
-//   display: grid;
-//   grid-template-columns: 320px auto;
-//   grid-gap: 100px;
-//   position: relative;
-
-//   @media (max-width: 450px) {
-//     grid-template-columns: auto;
-//     /* padding: 150px 20px 150px; */
-//     gap: 60px;
-//   }
-// `;
