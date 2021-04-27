@@ -81,6 +81,6 @@ const Summery = styled(BodyMain)`
   }
 
   @media (max-width: 768px) {
-    font-size: 15px;
+    font-size: 17pt;
   }
 `;
