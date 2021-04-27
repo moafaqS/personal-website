@@ -1,16 +1,38 @@
-import React, { useState } from "react"
-import styled, { keyframes } from "styled-components"
-import { menuData } from "../../Data/MenuData"
-import { MenuButton } from "../Buttons/MenuButton"
-import MenuToolTip from "../tooltib/MenuToolTip"
+import React, { useState } from "react";
+import { useEffect } from "react";
+import { useRef } from "react";
+import styled, { keyframes } from "styled-components";
+import { menuData } from "../../Data/MenuData";
+import { MenuButton } from "../Buttons/MenuButton";
+import MenuToolTip from "../tooltib/MenuToolTip";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const HamburgerButtonRef = useRef();
+  const MenuToolTipRef = useRef();
 
   function handleClick(event) {
-    setIsOpen(!isOpen)
-    event.preventDefault()
+    setIsOpen(!isOpen);
+    event.preventDefault();
   }
+
+  function handleClickOutside(event) {
+    if (
+      HamburgerButtonRef.current &&
+      !HamburgerButtonRef.current.contains(event.target) &&
+      !MenuToolTipRef.current.contains(event.target)
+    ) {
+      setIsOpen(false);
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <Wrapper>
@@ -19,27 +41,29 @@ const Header = () => {
           <MenuButton
             item={item}
             key={index}
-            onClick={event => handleClick(event)}
+            onClick={(event) => handleClick(event)}
           />
         ))}
 
-        <HamburgerWrapper>
+        <HamburgerWrapper ref={HamburgerButtonRef}>
           <MenuButton
             item={{
               title: "",
               icon: "/images/Menu/burger_menu.svg",
               link: "/",
             }}
-            onClick={event => handleClick(event)}
+            onClick={(event) => handleClick(event)}
           />
         </HamburgerWrapper>
       </MenuWrapper>
-      <MenuToolTip isOpen={isOpen} />
+      <div ref={MenuToolTipRef}>
+        <MenuToolTip isOpen={isOpen} />
+      </div>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
 
 const animation = keyframes`
   0%{
@@ -52,7 +76,7 @@ const animation = keyframes`
     transform : translateY(0px); blur(0px);
   }
 
-`
+`;
 
 const Wrapper = styled.div`
   position: absolute;
@@ -71,7 +95,7 @@ const Wrapper = styled.div`
     top: 20px;
     padding: 0 20px;
   }
-`
+`;
 const MenuWrapper = styled.div`
   display: grid;
   gap: 30px;
@@ -110,11 +134,11 @@ const MenuWrapper = styled.div`
       display: none;
     }
   }
-`
+`;
 
 const HamburgerWrapper = styled.div`
   display: none;
   @media (max-width: 768px) {
     display: block;
   }
-`
+`;
