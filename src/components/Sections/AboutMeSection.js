@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { H1, H2, H3, BodyIntro, BodyMain } from "../styles/textStyle";
+import { H3, BodyIntro, BodyMain } from "../styles/textStyle";
 
 export const AboutMeSection = () => {
   return (
@@ -70,7 +70,7 @@ const TextWrapper = styled.div`
 
   @media (max-width: 768px) {
     width: 80%;
-    font-size: 15px;
+    font-size: 14px;
   }
 `;
 const Name = styled(BodyIntro)``;
@@ -81,6 +81,6 @@ const Summery = styled(BodyMain)`
   }
 
   @media (max-width: 768px) {
-    font-size: 15p;
+    font-size: 14p;
   }
 `;
