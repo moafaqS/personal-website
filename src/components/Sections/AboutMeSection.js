@@ -57,6 +57,10 @@ const ContentWrapper = styled.div`
   padding: 130px 30px;
   position: relative;
   justify-items: center;
+
+  @media (max-width: 768px) {
+    padding: 0px;
+  }
 `;
 const Title = styled(H3)``;
 const Image = styled.img`
@@ -78,9 +82,5 @@ const Summery = styled(BodyMain)`
   text-align: justify;
   * {
     padding-top: 15px;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 14p;
   }
 `;

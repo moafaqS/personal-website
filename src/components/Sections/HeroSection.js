@@ -3,7 +3,6 @@ import styled, { keyframes } from "styled-components";
 import { H1, H2 } from "../styles/textStyle";
 import { themes } from "../styles/colorStyle";
 import SocialMediaGroup from "../SocialMedia/SocialMediaGroup";
-import WaveBackground from "../Background/BackgroundWave";
 import { BoxesWave } from "../Background/BoxesWave";
 
 function HeroSection() {
@@ -56,7 +55,6 @@ const ContentWrapper = styled.div`
 
   @media (max-width: 450px) {
     grid-template-columns: auto;
-    /* padding: 150px 20px 150px; */
     gap: 60px;
   }
 `;

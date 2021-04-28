@@ -37,6 +37,20 @@ export const BodyMain = styled.p`
   font-weight: normal;
   font-size: 20px;
   line-height: 140%;
+
+  @media (max-width: 768px) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 22px;
+    /* identical to box height, or 129% */
+
+    letter-spacing: -0.408px;
+
+    /* Label / Light / Primary */
+
+    color: #000000;
+  }
 `;
 
 export const MediumText = styled.p`
