@@ -16,26 +16,23 @@ export const AboutMeSection = () => {
             <p>
               I resented the gap between what I’ve been learning and what I’ve
               been practicing, so I decided to balance it.
-            </p>
-
-            <p>
+              <br />
+              <br />
               worked on the field of digital media & communications for almost 5
               years, and gained through it the passion for writing, and whether
               it was for the purpose of news or creativey, I made sure to master
               the whole process, from ideation to delivering final pieces. Which
               resulted in enabling me to become a stronger strategist, analyst
               and storyteller.
-            </p>
-
-            <p>
+              <br />
+              <br />
               As a researcher in the field, i believe I could combine my
               experience and tactics with the theoretical framework to produce
               more efficient methods & solutions for students, journalist and
               everyone in the circle, with specific goals in mind; reducing the
               gap and helping the local industry to reach its full potential.
-            </p>
-
-            <p>
+              <br />
+              <br />
               There’s still long way to go, but this is the mission I’m
               committed to, and I’m planning to spread the word!
             </p>
