@@ -15,19 +15,19 @@ export const ServicesSection = () => {
             <ServiceTitle>Creative Writing</ServiceTitle>
           </Service>
           <Service>
-            <Icon src="/images/1973807.svg"></Icon>
+            <Icon src="/images/ux-design.svg"></Icon>
             <ServiceTitle>UX Writing</ServiceTitle>
           </Service>
           <Service>
-            <Icon src="/images/1973807.svg"></Icon>
+            <Icon src="/images/scriptdevelopment.svg"></Icon>
             <ServiceTitle>Script Development</ServiceTitle>
           </Service>
           <Service>
-            <Icon src="/images/1973807.svg"></Icon>
+            <Icon src="/images/voiceover.svg"></Icon>
             <ServiceTitle>Voice over text</ServiceTitle>
           </Service>
           <Service>
-            <Icon src="/images/1973807.svg"></Icon>
+            <Icon src="/images/newsedit.svg"></Icon>
             <ServiceTitle>News Editing</ServiceTitle>
           </Service>
         </ServicesWrapper>
